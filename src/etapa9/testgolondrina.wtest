@@ -13,11 +13,16 @@ test "Golodrina1" {
 	tatiana.comer(sorgo, 8)
 	melina.volar(130)
 	tatiana.volar(40)
-	
-	
+	juliana.estaDebil()
+	juliana.estaFeliz()
+	melina.estaFeliz()
+	tatiana.estaDebil()
 	
 	assert.equals(juliana.energia(), 200)
 	assert.equals(melina.energia(), 760)
 	assert.equals(tatiana.energia(), 22)
-
+	assert.equals(juliana.estaDebil(), false)
+	assert.equals(juliana.estaFeliz(), false)
+	assert.equals(melina.estaFeliz(), true)
+	assert.equals(tatiana.estaDebil(), true)
 }
