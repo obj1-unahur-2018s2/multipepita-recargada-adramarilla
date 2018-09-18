@@ -1,5 +1,8 @@
 import golondrinas.*
 import comidas.*
+import roque.*
+import pepita.*
+import masAves.*
 
 test "Golodrina1" {
 	
@@ -25,4 +28,20 @@ test "Golodrina1" {
 	assert.equals(juliana.estaFeliz(), false)
 	assert.equals(melina.estaFeliz(), true)
 	assert.equals(tatiana.estaDebil(), true)
+}
+test "roque" {
+	
+	var paloma1 = new Paloma()
+		paloma1.comer(mijo, 100)
+	var golondrina1 = new Golondrina()
+		golondrina1.comer(mijo, 100)
+		
+	roque.agregarPupilo(paloma1)
+	roque.agregarPupilo(golondrina1)
+	roque.agregarPupilo(pepita)
+	roque.agregarPupilo(pepon)
+	
+	roque.entrenar()
+	
+	assert.equals(2000, golondrina1.energia())
 }
